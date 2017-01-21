@@ -38,7 +38,6 @@ describe('/suggestions', function() {
                 userId: '587c7c7873f1e7661ad7d288',
                 appName: 'SleepRecord',
                 appVersion: '1.5.6',
-                email: 'test@contact.com',
                 message: "Test suggestion",
                 platform: os.platform(),
                 osVersion: os.release(),

@@ -10,7 +10,6 @@ router.post("/", function(req, res, next) {
     userId: req.body.userId,
     appName: req.body.appName,
     appVersion: req.body.appVersion,
-    email: req.body.email,
     message: req.body.message,
     platform: req.body.platform,
     osVersion: req.body.osVersion
