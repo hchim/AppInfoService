@@ -6,10 +6,18 @@ var sugSchema = mongoose.Schema({
     appName: String,
     appVersion: String,
     createTime: {type: Date, default: Date.now},
-    email: String,
     message: String,
-    platform: String,
-    osVersion: String,
+    device: {
+        model: String,
+        brand: String,
+        serial: String,
+    },
+    "os": {
+        os_name: String,
+        sdk_int: Number,
+        os_type: String,
+        fingerprint: String,
+    }
 });
 
 // indexes
