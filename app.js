@@ -43,12 +43,13 @@ app.use(function (req, res, next) {
         next()
     })
 })
+
+app.use('/', index)
 //request signature checkup
 if (conf.get("env") !== 'test') {
     app.use(middlewares.signature_middleware)
 }
 // setup routes
-app.use('/', index);
 app.use('/suggestions', suggestions);
 
 //catch 404 and forward to error handler
