@@ -40,6 +40,10 @@ var conf = convict({
                 "default": "mongodb://localhost/appinfodb"
             }
         }
+    },
+    redis: {
+        host: '127.0.0.1',
+        port: 6379
     }
 
 });

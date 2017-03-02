@@ -7,6 +7,7 @@ var FileStreamRotator = require('file-stream-rotator');
 var fs = require('fs');
 var conf = require("./config");
 var metric = require('metricsclient')
+var middlewares = require('service-middlewares')(conf)
 
 //routes
 var index = require('./routes/index');
