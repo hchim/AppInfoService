@@ -2,11 +2,23 @@ var mongoose = require("mongoose");
 var conf = require("../config");
 
 var sugSchema = mongoose.Schema({
-    userId: String,
-    appName: String,
-    appVersion: String,
+    userId: {
+        type: String,
+        required: true
+    },
+    appName: {
+        type: String,
+        required: true
+    },
+    appVersion: {
+        type: String,
+        required: true
+    },
     createTime: {type: Date, default: Date.now},
-    message: String,
+    message: {
+        type: String,
+        required: true
+    },
     device: {
         model: String,
         brand: String,
