@@ -6,13 +6,14 @@ var bodyParser = require('body-parser');
 var FileStreamRotator = require('file-stream-rotator');
 var fs = require('fs');
 var conf = require("./config");
-var metric = require('metricsclient')
+var metric = require('metricsclient')(conf)
 var middlewares = require('service-middlewares')(conf)
 var utils = require('servicecommonutils')
 
 //routes
 var index = require('./routes/index');
 var suggestions = require('./routes/suggestions');
+var appconfigs = require('./routes/appconfigs')
 
 var app = express();
 
@@ -45,6 +46,8 @@ app.use(function (req, res, next) {
 })
 
 app.use('/', index)
+app.use('/confs', appconfigs)
+
 //request signature checkup
 if (conf.get("env") !== 'test') {
     app.use(middlewares.signature_middleware)
