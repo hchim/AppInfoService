@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var Suggestion = require("../models/Suggestion");
+var mongoose = require('mongoose');
+var Suggestion = require("appinfoservicemodels").Suggestion(mongoose.connection);
 var utils = require('servicecommonutils')
 
 /*

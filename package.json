@@ -24,6 +24,7 @@
     "string-format-js": "*",
     "metricsclient": "git+ssh://git@git.sleepaiden.com:service-infrastructure/metricserviceclient.git",
     "servicecommonutils": "git+ssh://git@git.sleepaiden.com:service-infrastructure/servicecommonutils.git",
-    "service-middlewares": "git+ssh://git@git.sleepaiden.com:service-infrastructure/servicemiddlewares.git"
+    "service-middlewares": "git+ssh://git@git.sleepaiden.com:service-infrastructure/servicemiddlewares.git",
+    "appinfoservicemodels": "git+ssh://git@git.sleepaiden.com:service-infrastructure/AppInfoServiceModels.git"
   }
 }
