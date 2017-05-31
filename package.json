@@ -22,9 +22,9 @@
     "request": "*",
     "moment-timezone": "*",
     "string-format-js": "*",
-    "metricsclient": "git+ssh://git@git.sleepaiden.com:service-infrastructure/metricserviceclient.git",
-    "servicecommonutils": "git+ssh://git@git.sleepaiden.com:service-infrastructure/servicecommonutils.git",
-    "service-middlewares": "git+ssh://git@git.sleepaiden.com:service-infrastructure/servicemiddlewares.git",
-    "appinfoservicemodels": "git+ssh://git@git.sleepaiden.com:service-infrastructure/AppInfoServiceModels.git"
+    "metricsclient": "git@github.com:hchim/MetricServiceClient.git",
+    "servicecommonutils": "git@github.com:hchim/ServiceCommonUtils.git",
+    "service-middlewares": "git@github.com:hchim/ServiceMiddlewares.git",
+    "appinfoservicemodels": "git@github.com:hchim/AppInfoServiceModels.git"
   }
 }
