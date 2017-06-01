@@ -10,6 +10,8 @@ var metric = require('metricsclient')(conf)
 var middlewares = require('service-middlewares')(conf)
 var utils = require('servicecommonutils')
 
+var winston = utils.getWinston(conf.get('env'));
+
 //routes
 var index = require('./routes/index');
 var suggestions = require('./routes/suggestions');
@@ -40,7 +42,7 @@ app.use(cookieParser());
 app.use(function (req, res, next) {
     metric.increaseCounter('AppInfoService:Usage:' + req.method + ':' + req.url, function (err, jsonObj) {
         if (err != null)
-            console.log(err)
+            winston.log('error', 'Failed to invoke increaseCounter.', err)
         next()
     })
 })
