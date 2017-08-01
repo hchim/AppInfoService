@@ -41,7 +41,7 @@ app.use(function (req, res, next) {
     metric.increaseCounter('AppInfoService:Usage:' + req.method + ':' + req.url, function (err, jsonObj) {
         if (err != null)
             winston.log('error', 'Failed to invoke increaseCounter.', err)
-        next()
+        next(err)
     })
 })
 

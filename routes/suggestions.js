@@ -37,7 +37,6 @@ router.post("/", function(req, res, next) {
 
  suggestion.save(function (err, suggestion) {
     if (err) {
-        console.log(err);
       return next(err);
     }
 
