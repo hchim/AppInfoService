@@ -21,14 +21,6 @@ fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-//api usage metric
-app.use(function (req, res, next) {
-    metric.increaseCounter('AppInfoService:Usage:' + req.method + ':' + req.url, function (err, jsonObj) {
-        if (err != null)
-            winston.log('error', 'Failed to invoke increaseCounter.', err)
-        next(err)
-    })
-})
 
 app.use('/', index)
 app.use('/confs', appconfigs)
