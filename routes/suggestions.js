@@ -1,10 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
 var Suggestion = require("appinfoservicemodels").Suggestion(mongoose.connection);
 var utils = require('servicecommonutils')
 var conf = require("../config");
 var metric = require('metricsclient')(conf)
+var winston = utils.getWinston(conf.get('env'))
 
 /*
 * Add suggestion
